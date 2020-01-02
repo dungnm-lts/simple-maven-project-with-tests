@@ -10,7 +10,8 @@ node ('master') {
       }        
     }
     stage('Results') {          
-      junit '**/target/surefire-reports/TEST-*.xml'          
+      junit '**/target/surefire-reports/TEST-*.xml'  
+      sh 'sleep 3600' 
       archive 'target/*.jar'        
     }      
   }
